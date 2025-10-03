@@ -16,17 +16,24 @@ docker pull <nombre imagen>:<tag>
 Descargar la imagen **hello-world**
 # COMPLETAR
 
-**¿Qué es nginx**
+```
+docker pull hello-world
+```
+
+**¿Qué es nginx?**
 # COMPLETAR 
+Es un servidor web que sirve para enviar o servir contenido web, manejar tráfico y distribur peticiones entre varios servidores.
 
 Descargar la imagen  **nginx** en la versión **alpine**
 # COMPLETAR
+![alt text](image.png)
 
 ### Listar imágenes
 
 ```
 docker images
 ```
+![alt text](image-2.png)
 
 # COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
 
@@ -44,8 +51,10 @@ docker inspect <nombre imagen>:<tag>
 
 Inspeccionar la imagen hello-world 
 # COMPLETAR
+![alt text](image-1.png)
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
+Con el algoritmo de hash sha256
 # COMPLETAR
 
 ### Filtrar imágenes
@@ -54,6 +63,7 @@ Inspeccionar la imagen hello-world
 docker images | grep <termino a buscar>
 
 ```
+![alt text](image-3.png)
 
 ### Para eliminar una imagen
 Eliminar permanentemente la imagen de tu sistema Docker.
@@ -64,6 +74,8 @@ docker rmi <nombre imagen>:<tag>
 
 Eliminar la imagen hello-world 
 # COMPLETAR
+
+![alt text](image-4.png)
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  
