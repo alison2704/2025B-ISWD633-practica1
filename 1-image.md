@@ -14,19 +14,22 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
 
 ```
 docker pull hello-world
 ```
 
+![alt text](image-18.png)
+
 **¿Qué es nginx?**
-# COMPLETAR 
 Es un servidor web que sirve para enviar o servir contenido web, manejar tráfico y distribur peticiones entre varios servidores.
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
+```
+docker pull nginx:alpine
+```
 ![alt text](image.png)
+
 
 ### Listar imágenes
 
@@ -35,7 +38,6 @@ docker images
 ```
 ![alt text](image-2.png)
 
-# COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
 
 **Identificadores**
 
@@ -50,18 +52,24 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
+```
+docker inspect hello-world
+```
+
 ![alt text](image-1.png)
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
 Con el algoritmo de hash sha256
-# COMPLETAR
 
 ### Filtrar imágenes
 
 ```
 docker images | grep <termino a buscar>
 
+```
+
+```
+docker images hello-world
 ```
 ![alt text](image-3.png)
 
@@ -73,8 +81,9 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
-# COMPLETAR
-
+```
+docker rmi hello-world:latest
+```
 ![alt text](image-4.png)
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.

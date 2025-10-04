@@ -12,14 +12,13 @@ docker create --name srv-web nginx:alpine
 ![alt text](image-5.png)
 
 Crear el contenedor  **srv-web** usando la imagen nginx version alpine
-# COMPLETAR
 
 Si creas un contenedor en Docker sin asignarle un nombre específico utilizando la opción --name, Docker asignará automáticamente un nombre aleatorio al contenedor. Este nombre suele consistir en una combinación de palabras y números.  
 
 Crear el contenedor usando la imagen hello-world
+
 ![alt text](image-6.png)
 
-# COMPLETAR
 
 ### Listar los contenedores ejecutándose o no
 
@@ -32,9 +31,9 @@ docker ps -a
 
 ```
 docker start <nombre contenedor o identificador>
+docker start srv-web
 ```
 Iniciar el contenedor srv-web 
-# COMPLETAR
 ![alt text](image-8.png)
 
 ### Listar los contenedores ejecutándose
@@ -48,6 +47,7 @@ docker ps | grep <nombre contenedor>
 
 ```
 docker stop <nombre contenedor>
+docker stop srv-web
 ```
 ![alt text](image-10.png)
 
@@ -56,16 +56,19 @@ docker stop <nombre contenedor>
 ```
 docker run --name <nombre contenedor> <nombre imagen>:<tag>
 
-docker run --name srv-web2 nginx:alpine
 ```
 ![Ecosistema de Docker](dockerRun.PNG)
 
 Crear y ejecutar inmediatamente el contenedor **srv-web2** usando la imagen nginx:alpine
-# COMPLETAR
+```
+docker run --name srv-web2 nginx:alpine
+
+```
+![alt text](image-19.png)
 
 **¿Qué sucede luego de la ejecución del comando?**
-# COMPLETAR  
-Ejecución del contenedor en primer plano, se logra capturar la entrada estándar de la terminal.
+
+La ejecución del contenedor se da en primer plano, se logra capturar la entrada estándar de la terminal.
 
 Cuando ejecutas un contenedor en primer plano sin la opción -d (modo detach), el contenedor captura la entrada estándar (stdin) del terminal, lo que significa que el terminal queda "atrapado" y no puedes introducir más comandos hasta que detengas el contenedor.
 
@@ -75,27 +78,28 @@ Cuando un contenedor se ejecuta en segundo plano, Docker devuelve el control al 
 
 ```
 docker run -d --name <nombre contenedor> <nombre imagen>:tag
-
- docker run -d --name srv-web3 nginx:alpine
 ```
 Crear y ejecutar inmediatamente el contenedor **srv-web3** en modo detach usando la imagen nginx:alpine
-# COMPLETAR
+
+```
+docker run -d --name srv-web3 nginx:alpine
+```
 ![alt text](image-11.png)
 
 ### Para eliminar un contenedor
 
 ```
 docker rm <nombre contenedor>
-
-docker rm epic_swanson
 ```
 
-![alt text](image-12.png)
 Eliminar el contenedor que se creó a partir de la imagen hello-world 
-# COMPLETAR
+```
+docker rm epic_swanson
+```
+![alt text](image-12.png)
+
 
 Verificar que el contenedor que se eliminó
-# COMPLETAR
 
 ![alt text](image-13.png)
 
@@ -109,14 +113,11 @@ docker rm -f srv-web3
 Eliminar el contenedor **srv-web3** 
 
 ![alt text](image-14.png)
-# COMPLETAR
 
 Verificar que el contenedor que se eliminó
-# COMPLETAR
 ![alt text](image-15.png)
 
 ### Para inspecionar un contenedor 
 
 Inspeccionar el contenedor **srv-web** 
-# COMPLETAR
 ![alt text](image-16.png)
